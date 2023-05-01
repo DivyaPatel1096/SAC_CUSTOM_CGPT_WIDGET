@@ -1,12 +1,12 @@
 {
   "eula": "",
-  "vendor": "Danish",
+  "vendor": "Divya",
   "license": "",
-  "id": "com.danish.sap.sac.chatgpt",
+  "id": "com.Divya.sap.sac.chatgpt",
   "version": "1.0.0",
-  "name": "chatGPT SAC",
-  "newInstancePrefix": "chatGPTInSAC",
-  "description": "A custom widget to integrate chatGPT3 in SAC Analytic application",
+  "name": "ChatGPT SAC",
+  "newInstancePrefix": "ChatGPTInSAC",
+  "description": "A custom widget to integrate ChatGPT3 in SAC Analytic application",
   "webcomponents": [
     {
       "kind": "main",
