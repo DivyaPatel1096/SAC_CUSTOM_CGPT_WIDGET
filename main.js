@@ -40,13 +40,7 @@ const url = "https://api.openai.com/v1";
       </div>
     `;
   class MainWebComponent extends HTMLElement {
-    constructor() {
-			super(); 
-			//this._shadowRoot = this.attachShadow({mode: "open"});
-			this.appendChild(template.content.cloneNode(true));
-			this._props = {};
-			let that = this;
-    }
+    
     async post(apiKey, endpoint, prompt) {
       const { response } = await ajaxCall(
         apiKey,
