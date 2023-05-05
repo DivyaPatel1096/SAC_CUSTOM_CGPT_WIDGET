@@ -5,7 +5,7 @@ var ajaxCall = (key, url, prompt) => {
       type: "POST",
       dataType: "json",
       data: JSON.stringify({
-        model: "text-davinci-002",
+        model: "text-divya-002",
         prompt: prompt,
         max_tokens: 1024,
         n: 1,
@@ -33,12 +33,20 @@ const url = "https://api.openai.com/v1";
 (function () {
   const template = document.createElement("template");
   template.innerHTML = `
+  <link rel="stylesheet" href="https://js.arcgis.com/4.15/esri/themes/light/main.css">
       <style>
       </style>
       <div id="root" style="width: 100%; height: 100%;">
       </div>
     `;
   class MainWebComponent extends HTMLElement {
+    constructor() {
+			super(); 
+			//this._shadowRoot = this.attachShadow({mode: "open"});
+			this.appendChild(template.content.cloneNode(true));
+			this._props = {};
+			let that = this;
+    }
     async post(apiKey, endpoint, prompt) {
       const { response } = await ajaxCall(
         apiKey,
